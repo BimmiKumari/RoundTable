@@ -1,5 +1,6 @@
 import './App.css';
-import Layout from '../src/pages/Layout'
+import Layout from '../src/pages/Layout';
+import Footer from '../src/components/Footer'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
         <Route path="/" element={Layout}></Route>
       </Routes>
       <Layout/>
+      <Footer/>
       </BrowserRouter>
         
     </div>

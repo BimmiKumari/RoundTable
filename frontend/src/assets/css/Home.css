@@ -15,14 +15,246 @@
         padding: 5px;  
         background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(55, 94, 99) 50%, rgb(249, 247, 247) 100%);
     }
+    .Container{
+        margin-top:50px ;
+        color:white;
+        display:flex;
+        flex-direction:column;
+        padding:30px;
+        justify-content: center;
+        align-items: center;
+    }
+    ul,li{
+        list-style-type:none;
+        display:flex;
+        justify-content: space-between;
+        padding-right: 50px;
+    
+    }
+    
+    form {
+        display: flex;
+        align-items: center;
+      }
+      
+      input[type="text"] {
+        padding: 8px;
+        margin-right: 8px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        width:360px
+      }
+      
+      button {
+        padding: 8px 16px;
+        background-color: #4ed91796;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+    
+    .sub3{
+        padding-top:0px;
+        width:500px;
+        height:100px;
+        display:flex;
+        margin-top:0px;
+        
+    }
+    .cardcollection{
+        margin-top:10px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        width:70%;
+        height:500px;
+        background-color: white;
+        border-radius:8px; 
+    }
+    .Card{
+        height:400px;
+        width:30%;
+        margin-top:26px;
+        background-color: white;
+        border-radius:8px;
+        margin-left:25px;
+    }
+    .cardhead1{
+     width:100%;
+     height:100px;
+     background: linear-gradient(90deg, rgba(179, 115, 29, 1) 0%, rgba(87, 43, 4, 1) 100%);
+     border-radius:8px 8px 0px 0px;
+     display:flex;
+     
+    }
+    .cardhead2{
+        width:100%;
+        height:100px;
+        background: linear-gradient(90deg, rgba(72, 182, 174, 1) 0%, rgba(14, 44, 41, 1) 100%);
+        border-radius:8px 8px 0px 0px;
+        display:flex;
+       }
+    .cardhead3{
+        width:100%;
+        height:100px;
+        background: linear-gradient(90deg, rgba(70, 160, 185, 1) 0%, rgba(14, 44, 41, 1) 100%);
+        border-radius:8px 8px 0px 0px;
+        display:flex;
+       }
+    .cardbody{
+        width:100%;
+    }
+    .heading{
+        margin:35px;
+        color:white;
+        font-weight:800;
+        
+    }
+    .heading2{
+        color:white;
+        font-weight:800;
+    }
+    .Navbar{
+        display: flex;
+        margin-top: 40px;
+        color:white;
+        margin-left:30px;
+       
+        gap:30px;
+    }
+    .logout{
+        margin-left:600px;
+    }
 }
 
 @media only screen and (min-width: 601px) and (max-width: 900px) {
     .Home {
-        height: 700px; 
+        height: 1100px; 
         padding: 8px;  
         background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(55, 94, 99) 50%, rgb(249, 247, 247) 100%);
        
+    }
+    .Container{
+        margin-top:50px ;
+        color:white;
+        display:flex;
+        flex-direction:column;
+        padding:30px;
+        justify-content: center;
+        align-items: center;
+    }
+    ul,li{
+        list-style-type:none;
+        display:flex;
+        justify-content: space-between;
+        padding-right: 50px;
+    
+    }
+    
+    form {
+        display: flex;
+        align-items: center;
+      }
+      
+      input[type="text"] {
+        padding: 8px;
+        margin-right: 8px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        width:360px
+      }
+      
+      button {
+        padding: 8px 16px;
+        background-color: #4ed91796;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+    
+    .sub3{
+        padding-top:0px;
+        width:500px;
+        height:100px;
+        display:flex;
+        margin-top:0px;
+        
+    }
+    .cardcollection{
+        margin-top:10px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width:85%;
+        height:600px;
+        background-color: white;
+        border-radius:8px;
+        margin-left:50px;
+        
+    }
+    .Card{
+        height:500px;
+        width:28%;
+        margin-top:10px;
+        background-color: white;
+        border-radius:8px;
+        margin-left:10px;
+    }
+    .cardhead1{
+     width:100%;
+     height:100px;
+     background: linear-gradient(90deg, rgba(179, 115, 29, 1) 0%, rgba(87, 43, 4, 1) 100%);
+     border-radius:8px 8px 0px 0px;
+     display:flex;
+     
+    }
+    .cardhead2{
+        width:100%;
+        height:100px;
+        background: linear-gradient(90deg, rgba(72, 182, 174, 1) 0%, rgba(14, 44, 41, 1) 100%);
+        border-radius:8px 8px 0px 0px;
+        display:flex;
+       }
+    .cardhead3{
+        width:100%;
+        height:100px;
+        background: linear-gradient(90deg, rgba(70, 160, 185, 1) 0%, rgba(14, 44, 41, 1) 100%);
+        border-radius:8px 8px 0px 0px;
+        display:flex;
+       }
+    .cardbody{
+        width:100%;
+    }
+    .heading{
+        margin:35px;
+        color:white;
+        font-weight:800;
+        
+    }
+    .heading2{
+        color:white;
+        font-weight:800;
+    }
+    .Navbar{
+        display: flex;
+        margin-top: 40px;
+        color:white;
+        margin-left:0px;
+       
+        gap:10px;
+    }
+    .logout{
+        margin-left:0px;
     }
 }
 
@@ -34,124 +266,125 @@
         background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(55, 94, 99) 50%, rgb(249, 247, 247) 100%);
         
     }
-}
-.Outerdiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-.Container{
-    margin-top:50px ;
-    color:white;
-    display:flex;
-    flex-direction:column;
-    padding:30px;
-    justify-content: center;
-    align-items: center;
-}
-ul,li{
-    list-style-type:none;
-    display:flex;
-    justify-content: space-between;
-    padding-right: 50px;
-
-}
-
-form {
-    display: flex;
-    align-items: center;
-  }
-  
-  input[type="text"] {
-    padding: 8px;
-    margin-right: 8px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    width:360px
-  }
-  
-  button {
-    padding: 8px 16px;
-    background-color: #4ed91796;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-
-.sub3{
-    padding-top:0px;
-    width:500px;
-    height:100px;
-    display:flex;
-    margin-top:0px;
+    .Outerdiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     
-}
-.cardcollection{
-    margin-top:10px;
-    display:flex;
-    width:70%;
-    height:500px;
-    background-color: white;
-    border-radius:8px; 
-}
-.Card{
-    height:400px;
-    width:30%;
-    margin-top:26px;
-    background-color: white;
-    border-radius:8px;
-    margin-left:25px;
-}
-.cardhead1{
- width:100%;
- height:100px;
- background: linear-gradient(90deg, rgba(179, 115, 29, 1) 0%, rgba(87, 43, 4, 1) 100%);
- border-radius:8px 8px 0px 0px;
- display:flex;
- 
-}
-.cardhead2{
-    width:100%;
-    height:100px;
-    background: linear-gradient(90deg, rgba(72, 182, 174, 1) 0%, rgba(14, 44, 41, 1) 100%);
-    border-radius:8px 8px 0px 0px;
-    display:flex;
-   }
-.cardhead3{
-    width:100%;
-    height:100px;
-    background: linear-gradient(90deg, rgba(70, 160, 185, 1) 0%, rgba(14, 44, 41, 1) 100%);
-    border-radius:8px 8px 0px 0px;
-    display:flex;
-   }
-.cardbody{
-    width:100%;
-}
-.heading{
-    margin:35px;
-    color:white;
-    font-weight:800;
+    }
+    .Container{
+        margin-top:50px ;
+        color:white;
+        display:flex;
+        flex-direction:column;
+        padding:30px;
+        justify-content: center;
+        align-items: center;
+    }
+    ul,li{
+        list-style-type:none;
+        display:flex;
+        justify-content: space-between;
+        padding-right: 50px;
     
+    }
+    
+    form {
+        display: flex;
+        align-items: center;
+      }
+      
+      input[type="text"] {
+        padding: 8px;
+        margin-right: 8px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        width:360px
+      }
+      
+      button {
+        padding: 8px 16px;
+        background-color: #4ed91796;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+      
+      button:hover {
+        background-color: #0056b3;
+      }
+    
+    .sub3{
+        padding-top:0px;
+        width:500px;
+        height:100px;
+        display:flex;
+        margin-top:0px;
+        
+    }
+    .cardcollection{
+        margin-top:10px;
+        display:flex;
+        width:70%;
+        height:500px;
+        background-color: white;
+        border-radius:8px; 
+    }
+    .Card{
+        height:400px;
+        width:30%;
+        margin-top:26px;
+        background-color: white;
+        border-radius:8px;
+        margin-left:25px;
+    }
+    .cardhead1{
+     width:100%;
+     height:100px;
+     background: linear-gradient(90deg, rgba(179, 115, 29, 1) 0%, rgba(87, 43, 4, 1) 100%);
+     border-radius:8px 8px 0px 0px;
+     display:flex;
+     
+    }
+    .cardhead2{
+        width:100%;
+        height:100px;
+        background: linear-gradient(90deg, rgba(72, 182, 174, 1) 0%, rgba(14, 44, 41, 1) 100%);
+        border-radius:8px 8px 0px 0px;
+        display:flex;
+       }
+    .cardhead3{
+        width:100%;
+        height:100px;
+        background: linear-gradient(90deg, rgba(70, 160, 185, 1) 0%, rgba(14, 44, 41, 1) 100%);
+        border-radius:8px 8px 0px 0px;
+        display:flex;
+       }
+    .cardbody{
+        width:100%;
+    }
+    .heading{
+        margin:35px;
+        color:white;
+        font-weight:800;
+        
+    }
+    .heading2{
+        color:white;
+        font-weight:800;
+    }
+    .Navbar{
+        display: flex;
+        margin-top: 40px;
+        color:white;
+        margin-left:30px;
+       
+        gap:30px;
+    }
+    .logout{
+        margin-left:600px;
+    }
 }
-.heading2{
-    color:white;
-    font-weight:800;
-}
-.Navbar{
-    display: flex;
-    margin-top: 40px;
-    color:white;
-    margin-left:30px;
-   
-    gap:30px;
-}
-.logout{
-    margin-left:600px;
-}
+

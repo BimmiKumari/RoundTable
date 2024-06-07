@@ -1,10 +1,17 @@
-
 import './App.css';
-import Home from '../src/pages/home'
+import Layout from '../src/pages/Layout'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <Home/>
+      <BrowserRouter>
+      
+      <Routes>
+        <Route path="/" element={Layout}></Route>
+      </Routes>
+      <Layout/>
+      </BrowserRouter>
+        
     </div>
   );
 }

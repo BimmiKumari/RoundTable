@@ -1,10 +1,18 @@
 import React from 'react'
-
+import '../assets/css/Resource.css'
  const Resource = () => {
   return (
-    <div>
+    <div className='Resource' >
+      <div className='ResCard '>
+        <div className='demo'>
+        <h1 >Get Better insights with our Resources</h1>
+        <button className="request">Request a Demo</button>
+        </div>
+        
+      </div>
+      <div className="Resbody">
 
-        <h2 className='text-white bg-slate-600'>Hello Customers</h2>
+        </div>
     </div>
   )
 }

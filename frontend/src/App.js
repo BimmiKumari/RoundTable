@@ -12,16 +12,16 @@ function App() {
       
        <BrowserRouter>
       
-       <Layout/>
+       <Navbar/>
            <Routes>
-                 <Route path="/Home" element={<Layout/>}></Route>
+                 <Route path="/" element={<Layout/>}></Route>
                  <Route path="/Resource" element={<Resource/>}></Route>
                  <Route path="/Pricing" element={<Pricing/>}></Route>
                  <Route path="/Customer" element={<Customer/>}></Route>
           
            </Routes>
            
-           <Footer/>
+           
        </BrowserRouter>
         
     </div>

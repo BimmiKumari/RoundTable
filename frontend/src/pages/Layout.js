@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Searchbar from '../components/Search';
-import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import '../assets/css/Home.css';
 import { GrWorkshop } from "react-icons/gr";
 import { GrTechnology } from "react-icons/gr";
@@ -27,7 +27,7 @@ const Layout = () => {
   return (
     
    <div className='Home'>
-     <Navbar/>
+     
     {/*Main Page */}
     <div className='Outerdiv'>
       <div className='Container'>
@@ -96,7 +96,7 @@ const Layout = () => {
              </div>
      </div>
     </div>
-        
+    <Footer/>
 
   </div>
   )

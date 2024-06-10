@@ -3,7 +3,6 @@
 .Home {
     display: flex;
     flex-direction: column;
-    
     width: 100%;
     height: 800px;
     padding: 10px;
@@ -59,12 +58,16 @@
         background-color: #0056b3;
       }
     
+      .sub1{
+        margin-bottom:17px;
+      }
+    
     .sub3{
-        padding-top:0px;
-        width:500px;
-        height:100px;
+        padding:12px ;
+        width:700px;
+        height:80px;
         display:flex;
-        margin-top:0px;
+        margin-top:6px;
         
     }
     .cardcollection{
@@ -120,16 +123,13 @@
         color:white;
         font-weight:800;
     }
-    .Navbar{
-        display: flex;
-        margin-top: 40px;
-        color:white;
-        margin-left:30px;
-       
-        gap:30px;
+    
+    
+    .desc{
+        margin:10px;
     }
-    .logout{
-        margin-left:600px;
+    .bookNow{
+        margin-top:20px;
     }
 }
 
@@ -183,12 +183,16 @@
         background-color: #0056b3;
       }
     
+      .sub1{
+        margin-bottom:17px;
+      }
+    
     .sub3{
-        padding-top:0px;
-        width:500px;
-        height:100px;
+        padding:12px ;
+        width:700px;
+        height:80px;
         display:flex;
-        margin-top:0px;
+        margin-top:6px;
         
     }
     .cardcollection{
@@ -246,16 +250,13 @@
         color:white;
         font-weight:800;
     }
-    .Navbar{
-        display: flex;
-        margin-top: 40px;
-        color:white;
-        margin-left:0px;
-       
-        gap:10px;
+   
+    
+    .desc{
+        margin:10px;
     }
-    .logout{
-        margin-left:0px;
+    .bookNow{
+        margin-top:20px;
     }
 }
 
@@ -264,7 +265,7 @@
     .Home {
         height: 1000px; 
         padding: 10px; 
-        background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(55, 94, 99) 50%, rgb(249, 247, 247) 100%);
+        background: linear-gradient(180deg, rgb(0, 0, 0) 10%, rgb(55, 94, 99) 50%, rgb(249, 247, 247) 100%);
         
     }
     .Outerdiv{
@@ -316,13 +317,16 @@
       button:hover {
         background-color: #0056b3;
       }
+      .sub1{
+        margin-bottom:17px;
+      }
     
     .sub3{
-        padding-top:0px;
-        width:500px;
-        height:100px;
+        padding:12px ;
+        width:700px;
+        height:80px;
         display:flex;
-        margin-top:0px;
+        margin-top:6px;
         
     }
     .cardcollection{
@@ -367,7 +371,10 @@
         width:100%;
     }
     .heading{
-        margin:35px;
+        display:flex;
+        width:500px;
+        margin-left:35px;
+        margin-top:35px;
         color:white;
         font-weight:800;
         
@@ -376,16 +383,13 @@
         color:white;
         font-weight:800;
     }
-    .Navbar{
-        display: flex;
-        margin-top: 40px;
-        color:white;
-        margin-left:30px;
-       
-        gap:30px;
+    
+    .desc{
+        margin:10px;
+        align-items:justify;
     }
-    .logout{
-        margin-left:600px;
+    .bookNow{
+        margin-top:20px;
     }
 }
 

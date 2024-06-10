@@ -1,12 +1,8 @@
 import React, { useState } from 'react';
 import Searchbar from '../components/Search';
-import { Link } from 'react-router-dom'
+import Navbar from '../components/Navbar'
 import '../assets/css/Home.css';
-import { IoPricetagsOutline } from "react-icons/io5";
-import { FaPeopleArrows } from "react-icons/fa";
-import { FaDatabase } from "react-icons/fa";
 import { GrWorkshop } from "react-icons/gr";
-import logo from '../assets/images/logo.png'
 import { GrTechnology } from "react-icons/gr";
 import { FaChalkboardTeacher } from "react-icons/fa";
 const Layout = () => {
@@ -31,19 +27,7 @@ const Layout = () => {
   return (
     
    <div className='Home'>
-      {/*Navbar */}
-    <nav>
-      <div className="Navbar">
-        <Link to="/Home" style={{color:'white',marginTop:'0px',textDecoration:'None'}}><img src={logo} style={{marginTop:0,width:250, height:65}}/> </Link>  
-        <Link to="/Resource" style={{color:'white',margin:'10px',textDecoration:'None'}}><FaDatabase />Resources</Link>
-        <Link to="/Pricing" style={{color:'white',margin:'10px',textDecoration:'None'}}><IoPricetagsOutline />Pricing</Link>
-        <Link to="/Customer" style={{color:'white',margin:'10px',textDecoration:'None'}}><FaPeopleArrows />Customers</Link>
-        <div >
-            <button class="logout">Log-out</button>
-        </div>
-      </div>
-      
-    </nav>
+     <Navbar/>
     {/*Main Page */}
     <div className='Outerdiv'>
       <div className='Container'>

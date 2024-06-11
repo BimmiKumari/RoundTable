@@ -1,5 +1,13 @@
 @media only screen and (min-width: 901px){
 .Navbar{
+
+    display: flex;
+    margin-top: 40px;
+    color:white;
+    margin-left:30px;
+    background-color: black;
+    gap:30px;
+
     display:flex;
     flex-direction: row;
     margin-top: 0px;
@@ -21,6 +29,7 @@
     height:35px;
     display:flex;
     gap:5px;
+<<<<<<< HEAD
     margin-top:10px;
     
 }
@@ -105,4 +114,7 @@
         margin-top:12px;
     }
   
+=======
+
+>>>>>>> c0133479a5414d4ef6fc3938767d32d92a8ccc96
 }

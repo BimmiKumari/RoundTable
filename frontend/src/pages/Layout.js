@@ -25,7 +25,7 @@ const Layout = () => {
     }
   };
   return (
-    
+    <div>
    <div className='Home'>
      
     {/*Main Page */}
@@ -43,6 +43,7 @@ const Layout = () => {
             <li style={{backgroundColor: "rgb(10, 61, 58) ",margin:12,borderRadius:8, fontSize:13.5,padding:6}}>Artificial Intelligence</li>
             <li style={{backgroundColor: "rgb(10, 61, 58) ", margin:12,borderRadius:8, fontSize:13.5,padding:6}}>Machine Learning</li>
             <li style={{backgroundColor: "rgb(10, 61, 58) ", margin:12,borderRadius:8, fontSize:13.5,padding:6}}>Data Science</li>
+            
          </ul>
         </div>
 
@@ -97,9 +98,11 @@ const Layout = () => {
              </div>
      </div>
     </div>
-    <Footer/>
+   
 
   </div>
+   <Footer/>
+   </div>
   )
 }
 export default Layout;

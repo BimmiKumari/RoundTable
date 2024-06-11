@@ -1,6 +1,7 @@
 import React from 'react'
-
-const Template = ({title,desc1,desc2,image,formtype,setIsLoggedIn}) => {
+import SignupForm from '../components/SignupForm' 
+import LoginForm from '../components/LoginForm'
+const Templates = ({title,desc1,desc2,image,formtype,setIsLoggedIn}) => {
   return (
         <div>
         
@@ -14,10 +15,7 @@ const Template = ({title,desc1,desc2,image,formtype,setIsLoggedIn}) => {
             <span>{desc1}</span>
             <span>{desc2}</span>
         </p>
-          {formtype ==="signup" ?
-           {<SignupForm/>}:
-           {<LoginForm/>}
-          }
+          {formtype ==="Signup" ? (<SignupForm/>): (<LoginForm/>)}
         <div>
             <div></div>
             <p>OR</p>
@@ -31,8 +29,8 @@ const Template = ({title,desc1,desc2,image,formtype,setIsLoggedIn}) => {
         
         
         
-        </div>
+      </div>
   )
 }
 
-export default Template
+export default Templates;

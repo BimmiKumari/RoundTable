@@ -17,7 +17,7 @@ import { FaInstagram } from "react-icons/fa";
           </div>
         
           
-          <div class="col">
+          <div className="col">
                     <h4>Contact Us</h4>
                     <div >
                          <p>Kadubesanhalli, Bangalore, karnataka,India</p>

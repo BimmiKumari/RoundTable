@@ -1,7 +1,7 @@
 import './App.css';
 import Layout from '../src/pages/Layout';
 import Resource from '../src/components/Resource'
-import Instructor from '../src/components/Instructor'
+import Virtualtour from '../src/components/Virtualtour'
 import Workshops from '../src/components/Workshops';
 import Navbar from '../src/components/Navbar';
 import MyBooking from '../src/components/MyBooking';
@@ -20,7 +20,7 @@ function App() {
            <Routes>
                  <Route path="/" element={<Layout/>}></Route>
                  <Route path="/Resource" element={<Resource/>}></Route>
-                 <Route path="/Ourinstructor" element={<Instructor/>}></Route>
+                 <Route path="/OurVirtualtour" element={<Virtualtour/>}></Route>
                  <Route path="/Workshops" element={<Workshops/>}></Route>
                  <Route path="/MyBooking" element={<MyBooking/>}></Route>
                  <Route path="/Login" element={<Login/>}></Route>

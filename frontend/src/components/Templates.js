@@ -3,9 +3,7 @@ import SignupForm from '../components/SignupForm'
 import LoginForm from '../components/LoginForm'
 const Templates = ({title,desc1,desc2,image,formtype,setIsLoggedIn}) => {
   return (
-        <div>
-        
-        
+        <div >
         <div>
             <h1>{title}</h1>
 

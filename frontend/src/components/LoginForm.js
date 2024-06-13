@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
+import '../assets/css/Loginform.css'
 const LoginForm = () => {
     const [formData,setFormData]=useState({
         email:"", password:""
@@ -15,8 +16,8 @@ const LoginForm = () => {
         ))
     }
   return (
-    <div>
-        <form>
+    <div >
+        <form className='LoginForm'>
             <label>
                 <p>
                     Email Adress<sup>*</sup>

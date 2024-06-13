@@ -17,14 +17,18 @@
     gap:40px;
 }
 
-
 .request{
    width:200px;
    height:40px; 
-   
+   display: flex;
+   gap:2px;
 }
 .Resbody{
     width:100%;
     height:600px;
     background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgb(55, 94, 99) 50%, rgb(249, 247, 247) 100%);
+}
+.btnalign{
+    display:flex;
+    gap:30px;
 }

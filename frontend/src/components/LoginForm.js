@@ -7,7 +7,7 @@ const LoginForm = ({setIsLoggedIn}) => {
   const navigate=useNavigate();
 
     const [formData,setFormData]=useState({
-        email:"", password:" "
+        email:"", password:""
     })
     const [showPassword,setShowPassword]= useState(false);
 
@@ -26,10 +26,10 @@ const LoginForm = ({setIsLoggedIn}) => {
     }
   return (
     <div>
-        <form onSubmit={submitHandler}>
-            <label>
-                <p>
-                    Email Adress<sup>*</sup>
+        <form onSubmit={submitHandler} className='flex flex-col w-full gap-y-4 mt-4'>
+            <label className='w-full'>
+                <p className='text-[0.875rem text-slate-50 mb-1 leading-[1.375rem]] mr-28'>
+                    Email Adress<sup className='text-red-600'>*</sup>
                 </p>
                 <input
                    required
@@ -38,11 +38,12 @@ const LoginForm = ({setIsLoggedIn}) => {
                    onChange={changeHandler}
                    placeholder='Enter your email id'
                    name="email"
+                   className='bg-slate-500 rounded-[0.5rem] text-slate-50 w-[216px] h-[38px] p-[10]'
                    />
             </label>
-            <label> 
-                <p>
-                    Password<sup>*</sup>
+            <label lassName=' relative ' > 
+                <p className='text-[0.875rem text-slate-50 mb-1 leading-[1.375rem]] mr-28'>
+                    Password<sup className='text-red-600'>*</sup>
                 </p>
                 <input
                    required
@@ -50,19 +51,21 @@ const LoginForm = ({setIsLoggedIn}) => {
                    value={formData.password}
                    onChange={changeHandler}
                    placeholder='Enter your password'
-                   name='password'
+                   name='password' className='bg-slate-500 rounded-[0.5rem] text-slate-50 w-[216px]  h-[38px] p-[12]'
                    />
-                   <span on onClick={()=> setShowPassword((prev)=>!prev)}>
-                        {showPassword ? (<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}
+                   <span 
+                   className='absolute right-[152px] bottom-[188px] cursor-pointer'
+                   onClick={()=> setShowPassword((prev)=>!prev)}>
+                        {showPassword ? (<AiOutlineEyeInvisible className='text-white'/>):(<AiOutlineEye/>)}
                    </span>
             <Link to="/">
-            <p>forget Password</p>
+            <p>Forget Password</p>
                 
             </Link>
         
 
             </label>
-            <button>Sign In</button>
+            <button className='bg-yellow-400 rounded-[8px] font-medium text-black font-semibold' >Sign In</button>
 
 
         </form>

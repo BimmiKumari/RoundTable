@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Searchbar from '../components/Search';
 import Footer from '../components/Footer'
 import '../assets/css/Home.css';
+import TourTimeline from '../components/TourTimeline'
 import { GrWorkshop } from "react-icons/gr";
 import { GrTechnology } from "react-icons/gr";
 import { FaChalkboardTeacher } from "react-icons/fa";
@@ -25,7 +26,7 @@ const Layout = () => {
     }
   };
   return (
-    
+    <div>
    <div className='Home'>
      
     {/*Main Page */}
@@ -39,10 +40,11 @@ const Layout = () => {
         </div>
         <div className='sub3'>
          <ul>
-            <li style={{backgroundColor: "rgb(10, 61, 58) " ,margin:12, borderRadius:8, fontSize:13.5,padding:6 }}>Full Stack Development</li>
-            <li style={{backgroundColor: "rgb(10, 61, 58) ",margin:12,borderRadius:8, fontSize:13.5,padding:6}}>Artificial Intelligence</li>
-            <li style={{backgroundColor: "rgb(10, 61, 58) ", margin:12,borderRadius:8, fontSize:13.5,padding:6}}>Machine Learning</li>
-            <li style={{backgroundColor: "rgb(10, 61, 58) ", margin:12,borderRadius:8, fontSize:13.5,padding:6}}>Data Science</li>
+            <li style={{backgroundColor: "rgb(10, 61, 58) " ,margin:12, borderRadius:8, fontSize:13.5,padding:6 }}>Book a workshop</li>
+            <li style={{backgroundColor: "rgb(10, 61, 58) ",margin:12,borderRadius:8, fontSize:13.5,padding:6}}>Join a tour to your dream Company</li>
+            <li style={{backgroundColor: "rgb(10, 61, 58) ", margin:12,borderRadius:8, fontSize:13.5,padding:6}}>Listen Tech podcasts</li>
+            <li style={{backgroundColor: "rgb(10, 61, 58) ", margin:12,borderRadius:8, fontSize:13.5,padding:6}}>Explore opportunities</li>
+            
          </ul>
         </div>
 
@@ -97,9 +99,13 @@ const Layout = () => {
              </div>
      </div>
     </div>
-    <Footer/>
+   
 
   </div>
+  <TourTimeline/>
+   <Footer/>
+   
+   </div>
   )
 }
 export default Layout;

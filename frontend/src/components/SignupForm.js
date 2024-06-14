@@ -8,11 +8,11 @@ const SignupForm = ({setIsLoggedIn }) => {
 
     const[formData,setFormData]=useState(
         {
-            firstname:" ",
-            lastname:" ",
-            email:" ",
+            firstname:"",
+            lastname:"",
+            email:"",
             password:"",
-            confirmPassword:" "
+            confirmPassword:""
         }
     )
     const[showPassword1,setShowPassword1]=useState(false);
@@ -40,7 +40,7 @@ const SignupForm = ({setIsLoggedIn }) => {
 
     }
   return (
-    <div>
+    <div className='flex flex-col'>
 
 
         <div>
@@ -60,6 +60,7 @@ const SignupForm = ({setIsLoggedIn }) => {
                 onChange={changeHandler}
                 placeholder='Enter First Name'
                 value={formData.firstname}
+                 className='bg-slate-500 rounded-[0.5rem] text-slate-50 w-9 h-[38px] p-[10] mr-10'
                 />
           
             </label>
@@ -72,13 +73,10 @@ const SignupForm = ({setIsLoggedIn }) => {
                 onChange={changeHandler}
                 placeholder='Enter Last Name'
                 value={formData.lastname}
+                 className='bg-slate-500 rounded-[0.5rem] text-slate-50 w-[212px] h-[38px] p-[10]'
                 />
           
             </label>
-
-
-
-           </div>
            <label>
                 <p>Email <sup>*</sup></p>
                 <input 
@@ -88,10 +86,10 @@ const SignupForm = ({setIsLoggedIn }) => {
                 onChange={changeHandler}
                 placeholder='Enter Email'
                 value={formData.email}
+                 className='bg-slate-500 rounded-[0.5rem] text-slate-50 w-[212px] h-[38px] p-[10]'
                 />
           
            </label>
-           <div>
            <label>
                 <p>Create Password <sup>*</sup></p>
                 <input 
@@ -101,6 +99,7 @@ const SignupForm = ({setIsLoggedIn }) => {
                 onChange={changeHandler}
                 placeholder='Enter password'
                 value={formData.password}
+                 className='bg-slate-500 rounded-[0.5rem] text-slate-50 w-[212px] h-[38px] p-[10]'
                 />
                  <span on onClick={()=> setShowPassword1((prev)=>!prev)}>
                         {showPassword1 ? (<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}
@@ -118,6 +117,7 @@ const SignupForm = ({setIsLoggedIn }) => {
                 onChange={changeHandler}
                 placeholder='Enter  confirm password'
                 value={formData.confirmpassword}
+                 className='bg-slate-500 rounded-[0.5rem] text-slate-50 w-[212px] h-[38px] p-[10]'
                 />
                  <span on onClick={()=> setShowPassword2((prev)=>!prev)}>
                         {showPassword2 ? (<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}

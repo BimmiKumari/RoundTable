@@ -8,9 +8,10 @@ import MyBooking from '../src/components/MyBooking';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import {Toaster} from 'react-hot-toast';
-
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { useState } from 'react';
 function App() {
+  const[isLoggedIn,setIsLoggedIn]= useState(false);
   return (
     <div className="App">
       
@@ -23,8 +24,8 @@ function App() {
                  <Route path="/OurVirtualtour" element={<Virtualtour/>}></Route>
                  <Route path="/Workshops" element={<Workshops/>}></Route>
                  <Route path="/MyBooking" element={<MyBooking/>}></Route>
-                 <Route path="/Login" element={<Login/>}></Route>
-                 <Route path="/Signup" element={<Signup/>}></Route>
+                 <Route path="/Login" element={<Login setIsLoggedIn={setIsLoggedIn} />}></Route>
+                 <Route path="/Signup" element={<Signup setIsLoggedIn={setIsLoggedIn}/>}></Route>
            </Routes>
            
            

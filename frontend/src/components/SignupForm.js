@@ -2,18 +2,21 @@ import React, { useState } from 'react';
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
 import {toast} from 'react-hot-toast'
-const SignupForm = () => {
+import { Navigate, useNavigate } from 'react-router-dom';
+const SignupForm = ({setIsLoggedIn }) => {
+    const navigate=useNavigate();
 
     const[formData,setFormData]=useState(
         {
             firstname:" ",
             lastname:" ",
             email:" ",
-            password:" ",
+            password:"",
             confirmPassword:" "
         }
     )
-    const[showPassword,setShowPassword]=useState(false);
+    const[showPassword1,setShowPassword1]=useState(false);
+    const[showPassword2,setShowPassword2]=useState(false);
     function changeHandler(event){
         setFormData((prevData)=>(
           {  ...prevData,
@@ -25,8 +28,16 @@ const SignupForm = () => {
         event.preventDefault();
         if (formData.password!=formData.confirmPassword){
 
-            toast.error("password didn't match")
+            toast.error("password didn't match");
         } 
+        setIsLoggedIn(true);
+        toast.success("Account Created");
+        const accountData={
+            ...formData
+        }
+        console.log (accountData);
+        navigate("/");
+
     }
   return (
     <div>
@@ -85,14 +96,14 @@ const SignupForm = () => {
                 <p>Create Password <sup>*</sup></p>
                 <input 
                 required
-                type={showPassword? ("text"):("password")}
+                type={showPassword1? ("text"):("password")}
                 name="password"
                 onChange={changeHandler}
                 placeholder='Enter password'
                 value={formData.password}
                 />
-                 <span on onClick={()=> setShowPassword((prev)=>!prev)}>
-                        {showPassword ? (<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}
+                 <span on onClick={()=> setShowPassword1((prev)=>!prev)}>
+                        {showPassword1 ? (<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}
                    </span>
           
             </label>
@@ -102,14 +113,14 @@ const SignupForm = () => {
                 <p>Confirm Password <sup>*</sup></p>
                 <input 
                 required
-                type={showPassword? ("text"):("password")}
+                type={showPassword2? ("text"):("password")}
                 name="confirmPassword"
                 onChange={changeHandler}
                 placeholder='Enter  confirm password'
                 value={formData.confirmpassword}
                 />
-                 <span on onClick={()=> setShowPassword((prev)=>!prev)}>
-                        {showPassword ? (<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}
+                 <span on onClick={()=> setShowPassword2((prev)=>!prev)}>
+                        {showPassword2 ? (<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)}
                    </span>
           
             </label>

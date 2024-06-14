@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Searchbar from '../components/Search';
 import Footer from '../components/Footer'
 import '../assets/css/Home.css';
+import TourTimeline from '../components/TourTimeline'
 import { GrWorkshop } from "react-icons/gr";
 import { GrTechnology } from "react-icons/gr";
 import { FaChalkboardTeacher } from "react-icons/fa";
@@ -101,7 +102,9 @@ const Layout = () => {
    
 
   </div>
+  <TourTimeline/>
    <Footer/>
+   
    </div>
   )
 }

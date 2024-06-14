@@ -2,15 +2,13 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { AiOutlineEyeInvisible } from "react-icons/ai";
 import { AiOutlineEye } from "react-icons/ai";
-<<<<<<< HEAD
+
 import toast from 'react-hot-toast';
 const LoginForm = ({setIsLoggedIn}) => {
   const navigate=useNavigate();
 
-=======
-import '../assets/css/Loginform.css'
 const LoginForm = () => {
->>>>>>> main
+
     const [formData,setFormData]=useState({
         email:"", password:" "
     })
@@ -30,13 +28,10 @@ const LoginForm = () => {
      navigate("/");
     }
   return (
-<<<<<<< HEAD
-    <div>
-        <form onSubmit={submitHandler}>
-=======
+
     <div >
-        <form className='LoginForm'>
->>>>>>> main
+        <form onClick={{submitHandler}} className='LoginForm'>
+
             <label>
                 <p>
                     Email Adress<sup>*</sup>

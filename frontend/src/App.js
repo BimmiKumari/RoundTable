@@ -1,4 +1,5 @@
 import './App.css';
+import Footer from '../src/components/Footer'
 import Layout from '../src/pages/Layout';
 import Resource from '../src/components/Resource'
 import Virtualtour from '../src/components/Virtualtour'
@@ -30,6 +31,7 @@ function App() {
            
            
        </BrowserRouter>
+       <Footer/>
         <Toaster/>
     </div>
   );

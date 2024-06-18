@@ -17,7 +17,7 @@ import { FiLogIn } from "react-icons/fi";
      
      <div className="Navbar">
        <Link to="/" style={{color:'white',marginTop:'0px',textDecoration:'None'}}><img src={logo} style={{marginTop:0,width:250, height:65}}/> </Link>  
-       <Link to="/Workshop" style={{color:'white',marginTop:'10px',marginLeft:'20px',textDecoration:'None'}}><div className='tab'><FaSearch  />Workshops</div></Link>
+       <Link to="/Workshops" style={{color:'white',marginTop:'10px',marginLeft:'20px',textDecoration:'None'}}><div className='tab'><FaSearch  />Workshops</div></Link>
        <Link to="/OurVirtualtour" style={{color:'white',marginTop:'10px',textDecoration:'None'}}><div className='tab'><GiTeacher />Virtual Tour</div></Link>
        <Link to="/" style={{color:'white',marginTop:'10px',textDecoration:'None'}}><div className='tab'><FaPodcast />Podcasts</div></Link>
        <Link to="/" style={{color:'white',marginTop:'10px',textDecoration:'None'}}><div className='tab'><MdWork />Opportunities</div></Link>

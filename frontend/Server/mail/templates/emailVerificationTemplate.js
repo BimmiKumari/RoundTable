@@ -11,7 +11,7 @@ const otpTemplate = (otp) => {
 				font-family: Arial, sans-serif;
 				font-size: 16px;
 				line-height: 1.4;
-				color: #333333;
+				color: white;
 				margin: 0;
 				padding: 0;
 			}
@@ -66,8 +66,7 @@ const otpTemplate = (otp) => {
 	
 	<body>
 		<div class="container">
-			<a href="http://localhost:3000"><img class="logo"
-					src="https://i.ibb.co/7Xyj3PC/logo.png" alt="RoundTable Logo"></a>
+			<a href="http://localhost:3000"></a>
 			<div class="message">OTP Verification Email</div>
 			<div class="body">
 				<p>Dear User,</p>

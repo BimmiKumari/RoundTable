@@ -36,8 +36,8 @@ const Layout = () => {
     {/*Main Page */}
     <div className='Outerdiv ml-0'>
       <div className='Container '>
-        <div className='sub1'>
-          <b><h1><HighlightText text={"Beyond The Classroom:Your Path in Excellence"} /></h1></b>
+        <div className='sub1 text-4xl '>
+          <HighlightText text={"Beyond The Classroom:Your Path in Excellence"} />
         </div>
         <div className='sub2'>
           <Searchbar onSearch={handleSearch} />
@@ -111,7 +111,7 @@ const Layout = () => {
   </div>
   </div>
    <div style={{background: "rgb(55, 94, 99)",color:'white'}}>
-  <div className="mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 ">
+  <div className="mx-auto flex w-11/12 max-w-maxContent  flex-col items-center justify-between gap-8 ">
           <div className="mb-10 mt-[-100px] flex flex-col justify-between gap-7 lg:mt-20 lg:flex-row lg:gap-0">
             <div className="text-4xl font-semibold lg:w-[45%] ">
               Get the skills you need for a{" "}

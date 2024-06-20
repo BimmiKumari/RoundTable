@@ -7,6 +7,7 @@ import { GrWorkshop } from "react-icons/gr";
 import Freetip from "../components/FreeTipadded"
 import { GrTechnology } from "react-icons/gr";
 import frame from '../assets/images/framebg.svg';
+
 import HighlightText from '../components/HighlightText';
 import { FaChalkboardTeacher } from "react-icons/fa";
 const Layout = () => {
@@ -36,7 +37,7 @@ const Layout = () => {
     <div className='Outerdiv ml-0'>
       <div className='Container '>
         <div className='sub1'>
-          <b><h1>Beyond The Classroom:Your Path in Excellence</h1></b>
+          <b><h1><HighlightText text={"Beyond The Classroom:Your Path in Excellence"} /></h1></b>
         </div>
         <div className='sub2'>
           <Searchbar onSearch={handleSearch} />

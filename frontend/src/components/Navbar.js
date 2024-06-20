@@ -27,8 +27,8 @@ import { FiLogIn } from "react-icons/fi";
        <div className="rightsection" >
            <Link to="/MyBooking" style={{color:'white',marginTop:'10px',textDecoration:'None'}}><div className='tab'><FaCartFlatbed />MyBooking</div></Link>
            
-          <Link to="/Login" ><button className="loginbtn">Log-in<FiLogIn /></button></Link>
-           <Link to="/Signup" ><button className="loginbtn"> Sign-up<FiLogOut /></button></Link>
+          <Link to="/login" ><button className="loginbtn">Log-in<FiLogIn /></button></Link>
+           <Link to="/signup" ><button className="loginbtn"> Sign-up<FiLogOut /></button></Link>
        </div>
      </div>
      

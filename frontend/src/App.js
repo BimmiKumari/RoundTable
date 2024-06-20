@@ -9,10 +9,11 @@ import Navbar from '../src/components/Navbar';
 import MyBooking from '../src/components/MyBooking';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import UpdatePassword from './pages/UpdatePassword'
 import { useDispatch, useSelector } from "react-redux";
 import {Toaster} from 'react-hot-toast';
 import { BrowserRouter, Routes, Route, Navigate} from 'react-router-dom'
-
+import ForgotPassword from './pages/ForgotPassword'
 
 function App() {
   const dispatch = useDispatch();
@@ -33,11 +34,9 @@ function App() {
                  <Route path="/MyBooking" element={<MyBooking/>}></Route>
                  <Route path="/login" element={<Login  />}></Route>
                  <Route path="/signup" element={<Signup />}></Route>
-                 <Route path="verify-email" element={
-                          
-                                 <VerifyEmail />
-                           }></Route>
-          
+                 <Route path="verify-email" element={ <VerifyEmail /> }></Route>
+                 <Route path="forgot-password"  element={  <ForgotPassword /> } />  
+                 <Route path="update-password/:id" element={<UpdatePassword />} />  
            </Routes>
            
            

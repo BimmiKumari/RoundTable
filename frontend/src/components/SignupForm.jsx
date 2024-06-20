@@ -92,8 +92,8 @@ function SignupForm() {
             <p className="mb-1 text-[0.875rem] leading-[1.375rem] text-richblack-5">
               First Name <sup className="text-pink-200">*</sup>
             </p>
-            <input
-              required
+            <input 
+             required
               type="text"
               name="firstName"
               value={firstName}

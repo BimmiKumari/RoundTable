@@ -47,7 +47,7 @@ function VerifyEmail() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-3.5rem)] grid place-items-center">
+    <div style={{background:"linear-gradient(180deg, rgb(0, 0, 0) 10%, rgb(55, 94, 99) 50%)"}} className="min-h-[calc(100vh-3.5rem)] grid place-items-center">
       {loading ? (
         <div>
           <div className="spinner"></div>

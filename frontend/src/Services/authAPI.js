@@ -74,6 +74,7 @@ export function signUp(
       navigate("/login")
     } catch (error) {
       console.log("SIGNUP API ERROR............", error)
+      
       toast.error("Signup Failed")
       navigate("/signup")
     }

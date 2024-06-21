@@ -14,7 +14,6 @@ function VerifyEmail() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Only allow access of this route when user has filled the signup form
     if (!signupData) {
       navigate("/signup");
     }
@@ -82,7 +81,7 @@ function VerifyEmail() {
             />
             <button
               type="submit"
-              className="w-full bg-yellow-50 py-[12px] px-[12px] rounded-[8px] mt-6 font-medium text-richblack-900"
+              className="w-full  py-[12px] px-[12px] rounded-[8px] mt-6 font-medium text-white"
             >
               Verify Email
             </button>

@@ -13,7 +13,7 @@ function SignupForm() {
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
-  // student or instructor
+  
   const [accountType, setAccountType] = useState(ACCOUNT_TYPE.STUDENT)
 
   const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ function SignupForm() {
 
   const { firstName, lastName, email, password, confirmPassword } = formData
 
-  // Handle input fields, when some value changes
+  
   const handleOnChange = (e) => {
     setFormData((prevData) => ({
       ...prevData,
@@ -37,7 +37,6 @@ function SignupForm() {
     }))
   }
 
-  // Handle Form Submission
   const handleOnSubmit = (e) => {
     e.preventDefault()
 
@@ -50,7 +49,7 @@ function SignupForm() {
       accountType,
     }
 
-    // Setting signup data to state
+
     // To be used after otp verification
     dispatch(setSignupData(signupData))
     // Send OTP to user for verification
@@ -198,7 +197,7 @@ function SignupForm() {
         </div>
         <button
           type="submit"
-          className="mt-6 rounded-[8px] bg-yellow-50 py-[8px] px-[12px] font-medium text-richblack-900"
+          className="mt-6 rounded-[8px]  py-[8px] px-[12px] font-medium text-white"
         >
           Create Account
         </button>

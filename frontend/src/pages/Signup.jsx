@@ -1,4 +1,4 @@
-import signupImg from "../assets/images/signup.webp"
+import signupImg from "../assets/images/signup.png"
 import Template from "../components/Template"
 
 function Signup() {

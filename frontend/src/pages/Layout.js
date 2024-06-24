@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Searchbar from '../components/Search';
 import '../assets/css/Home.css';
 import { Link } from 'react-router-dom';
 import TourTimeline from '../components/TourTimeline'
@@ -7,7 +6,6 @@ import { GrWorkshop } from "react-icons/gr";
 import Freetip from "../components/FreeTipadded"
 import { GrTechnology } from "react-icons/gr";
 import frame from '../assets/images/framebg.svg';
-
 import HighlightText from '../components/HighlightText';
 import { FaChalkboardTeacher } from "react-icons/fa";
 const Layout = () => {
@@ -19,16 +17,7 @@ const Layout = () => {
     'Finance'
   ];
   const [filteredItems, setFilteredItems] = useState(items);
-  const handleSearch = (query) => {
-    if (query) {
-      const results = items.filter(item =>
-        item.toLowerCase().includes(query.toLowerCase())
-      );
-      setFilteredItems(results);
-    } else {
-      setFilteredItems(items);
-    }
-  };
+ 
   return (
     <div>
    <div className='Home ml-0'>
@@ -40,7 +29,7 @@ const Layout = () => {
           <HighlightText text={"Beyond The Classroom:Your Path in Excellence"} />
         </div>
         <div className='sub2'>
-          <Searchbar onSearch={handleSearch} />
+         
         </div>
         <div className='sub3'>
          <ul>

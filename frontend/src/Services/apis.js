@@ -1,5 +1,6 @@
 const BASE_URL = "http://localhost:4000/api/v1"
 
+// AUTH ENDPOINTS
 export const endpoints = {
   SENDOTP_API: BASE_URL + "/auth/sendotp",
   SIGNUP_API: BASE_URL + "/auth/signup",
@@ -7,6 +8,7 @@ export const endpoints = {
   RESETPASSTOKEN_API: BASE_URL + "/auth/reset-password-token",
   RESETPASSWORD_API: BASE_URL + "/auth/reset-password",
 }
+
 // PROFILE ENDPOINTS
 export const profileEndpoints = {
   GET_USER_DETAILS_API: BASE_URL + "/profile/getUserDetails",
@@ -67,4 +69,9 @@ export const settingsEndpoints = {
   UPDATE_PROFILE_API: BASE_URL + "/profile/updateProfile",
   CHANGE_PASSWORD_API: BASE_URL + "/auth/changepassword",
   DELETE_PROFILE_API: BASE_URL + "/profile/deleteProfile",
+}
+export const searchEndpoints = {
+  SEARCH_PREDEFINED_RESULT_API: BASE_URL + "/search/getAllCourses",
+  QUERY_SEARCH_API: BASE_URL + "/search/dropdown",
+  SEARCH_PAGE_API: BASE_URL + "/search"
 }

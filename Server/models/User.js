@@ -3,12 +3,10 @@ const userSchema=new mongoose.Schema(
     {
         firstname:{
             type:String,
-          
             trim:true,
         },
         lastname:{
             type:String,
-            
             trim:true,
         },
         email:{
@@ -35,9 +33,15 @@ const userSchema=new mongoose.Schema(
         },
         additionalDetails:{
             type:mongoose.Schema.Types.ObjectId,
+            required:true,
             ref:"Profile",
         },
-        
+        courses:[
+            {
+                type:mongoose.Schema.Types.ObjectId,
+                ref:"Course",
+            },
+        ],
         token:{
             type:String,
         },
@@ -48,7 +52,12 @@ const userSchema=new mongoose.Schema(
             type:String,
             required:true,
         },
-       
+        courseProgress:[
+            {
+                type:mongoose.Schema.Types.ObjectId,
+                ref:"courseProgress",
+            },
+        ],
 
     },
     {

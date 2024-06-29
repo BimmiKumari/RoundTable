@@ -4,7 +4,7 @@ import { BiArrowBack } from "react-icons/bi"
 import { useDispatch, useSelector } from "react-redux"
 import { Link, useLocation, useNavigate } from "react-router-dom"
 
-import { resetPassword } from "../Services/authAPI"
+import { resetPassword } from "../services/operations/authAPI"
 
 function UpdatePassword() {
   const navigate = useNavigate()
@@ -35,7 +35,7 @@ function UpdatePassword() {
   }
 
   return (
-    <div style={{background:"linear-gradient(180deg, rgb(0, 0, 0) 10%, rgb(55, 94, 99) 50%)"}} className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
+    <div className="grid min-h-[calc(100vh-3.5rem)] place-items-center">
       {loading ? (
         <div className="spinner"></div>
       ) : (
@@ -58,7 +58,7 @@ function UpdatePassword() {
                 value={password}
                 onChange={handleOnChange}
                 placeholder="Enter Password"
-                className="form-style w-full h-10 !pr-10"
+                className="form-style w-full !pr-10"
               />
               <span
                 onClick={() => setShowPassword((prev) => !prev)}
@@ -82,7 +82,7 @@ function UpdatePassword() {
                 value={confirmPassword}
                 onChange={handleOnChange}
                 placeholder="Confirm Password"
-                className="form-style w-full h-10 !pr-10"
+                className="form-style w-full !pr-10"
               />
               <span
                 onClick={() => setShowConfirmPassword((prev) => !prev)}

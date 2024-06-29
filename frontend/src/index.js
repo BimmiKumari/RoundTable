@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import rootReducer from "./reducer/Rootin";
+import rootReducer from "./reducer";
 import {configureStore} from "@reduxjs/toolkit"
-import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import { Toaster } from "react-hot-toast";
 const store = configureStore({
@@ -14,12 +14,13 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Provider store = {store}>
-      
-    <App />
-    <Toaster/>
+    <BrowserRouter>
+        <App />
+        <Toaster/>
+      </BrowserRouter>
     </Provider>
     
   </React.StrictMode>
 );
 
-reportWebVitals();
+

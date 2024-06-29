@@ -297,7 +297,7 @@
       
       button {
         padding: 8px 16px;
-        background-color: #4ed91796;
+        background-color: #16f50a96;
         color: white;
         border: none;
         border-radius: 8px;
@@ -306,7 +306,7 @@
       
       button:hover {
         background-color: aqua;
-        color:black
+        color:black;
       }
       .sub1{
         margin-bottom:17px;
@@ -318,6 +318,7 @@
         height:80px;
         display:flex;
         margin-top:6px;
+        margin-left:150px;
         
     }
     .cardcollection{

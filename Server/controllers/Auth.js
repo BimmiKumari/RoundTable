@@ -2,10 +2,10 @@ const bcrypt = require("bcryptjs")
 const User = require("../models/User")
 const OTP = require("../models/OTP")
 const jwt = require("jsonwebtoken")
-const Profile = require("../models/Profile")
 const otpGenerator = require("otp-generator")
 const mailSender = require("../utils/mailSender")
 const { passwordUpdated } = require("../mail/templates/passwordUpdate")
+const Profile = require("../models/Profile")
 require("dotenv").config()
 exports.signup = async (req, res) => {
   try {
@@ -75,23 +75,22 @@ exports.signup = async (req, res) => {
     let approved = ""
     approved === "Instructor" ? (approved = false) : (approved = true)
 
+   
     const profileDetails = await Profile.create({
       gender: null,
       dateOfBirth: null,
       about: null,
       contactNumber: null,
     })
-    
     const user = await User.create({
       firstName,
       lastName,
       email,
-      
       password: hashedPassword,
       accountType: accountType,
       approved: approved,
       additionalDetails: profileDetails._id,
-      image:`https://api.dicebear.com/5.x/initials/svg?seed=${firstName} ${lastName}`
+      image: `https://api.dicebear.com/5.x/initials/svg?seed=${firstName} ${lastName}`,
     })
 
     return res.status(200).json({

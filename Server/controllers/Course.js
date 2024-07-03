@@ -388,7 +388,10 @@ exports.deleteCourse = async (req, res) => {
     }
 
     
+    const studentsEnrolled = course.studentsEnrolled
+
     const studentsEnrolled = course.studentsEnroled
+
     for (const studentId of studentsEnrolled) {
       await User.findByIdAndUpdate(studentId, {
         $pull: { courses: courseId },

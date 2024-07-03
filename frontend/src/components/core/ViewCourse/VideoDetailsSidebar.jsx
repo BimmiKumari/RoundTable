@@ -35,7 +35,9 @@ export default function VideoDetailsSidebar({ setReviewModal }) {
       setActiveStatus(courseSectionData?.[currentSectionIndx]?._id)
       setVideoBarActive(activeSubSectionId)
     })()
-   
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [courseSectionData, courseEntireData, location.pathname])
 
   return (

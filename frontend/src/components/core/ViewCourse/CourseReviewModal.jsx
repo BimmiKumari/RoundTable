@@ -3,10 +3,8 @@ import { useForm } from "react-hook-form"
 import { RxCross2 } from "react-icons/rx"
 import ReactStars from "react-rating-stars-component"
 import { useSelector } from "react-redux"
-
 import { createRating } from "../../../services/operations/courseDetailsAPI"
 import IconBtn from "../../common/IconBtn"
-
 export default function CourseReviewModal({ setReviewModal }) {
   const { user } = useSelector((state) => state.profile)
   const { token } = useSelector((state) => state.auth)
@@ -22,11 +20,10 @@ export default function CourseReviewModal({ setReviewModal }) {
   useEffect(() => {
     setValue("courseExperience", "")
     setValue("courseRating", 0)
-   
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const ratingChanged = (newRating) => {
-    // console.log(newRating)
     setValue("courseRating", newRating)
   }
 
@@ -45,7 +42,7 @@ export default function CourseReviewModal({ setReviewModal }) {
   return (
     <div className="fixed inset-0 z-[1000] !mt-0 grid h-screen w-screen place-items-center overflow-auto bg-white bg-opacity-10 backdrop-blur-sm">
       <div className="my-10 w-11/12 max-w-[700px] rounded-lg border border-richblack-400 bg-richblack-800">
-        {/* Modal Header */}
+      
         <div className="flex items-center justify-between rounded-t-lg bg-richblack-700 p-5">
           <p className="text-xl font-semibold text-richblack-5">Add Review</p>
           <button onClick={() => setReviewModal(false)}>
@@ -57,12 +54,12 @@ export default function CourseReviewModal({ setReviewModal }) {
           <div className="flex items-center justify-center gap-x-4">
             <img
               src={user?.image}
-              alt={user?.firstName + "profile"}
+              alt={user?.firstname + "profile"}
               className="aspect-square w-[50px] rounded-full object-cover"
             />
             <div className="">
               <p className="font-semibold text-richblack-5">
-                {user?.firstName} {user?.lastName}
+                {user?.firstname} {user?.lastname}
               </p>
               <p className="text-sm text-richblack-5">Posting Publicly</p>
             </div>

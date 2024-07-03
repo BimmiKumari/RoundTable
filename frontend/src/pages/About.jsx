@@ -1,6 +1,5 @@
 import React from "react"
 import ContactFormSection from "../components/core/AboutPage/ContactFormSection"
-import ReviewSlider from "../components/common/ReviewSlider"
 import Workshop from "../components/core/AboutPage/Workshop"
 const About = () => {
   return (

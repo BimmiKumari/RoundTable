@@ -11,8 +11,8 @@ exports.signup = async (req, res) => {
   try {
     
     const {
-      firstName,
-      lastName,
+      firstname,
+      lastname,
       email,
       password,
       confirmPassword,
@@ -21,8 +21,8 @@ exports.signup = async (req, res) => {
     } = req.body
     
     if (
-      !firstName ||
-      !lastName ||
+      !firstname ||
+      !lastname ||
       !email ||
       !password ||
       !confirmPassword ||
@@ -83,14 +83,14 @@ exports.signup = async (req, res) => {
       contactNumber: null,
     })
     const user = await User.create({
-      firstName,
-      lastName,
+      firstname,
+      lastname,
       email,
       password: hashedPassword,
       accountType: accountType,
       approved: approved,
       additionalDetails: profileDetails._id,
-      image: `https://api.dicebear.com/5.x/initials/svg?seed=${firstName} ${lastName}`,
+      image: `https://api.dicebear.com/5.x/initials/svg?seed=${firstname} ${lastname}`,
     })
 
     return res.status(200).json({
@@ -251,7 +251,7 @@ exports.changePassword = async (req, res) => {
         "Password for your account has been updated",
         passwordUpdated(
           updatedUserDetails.email,
-          `Password updated successfully for ${updatedUserDetails.firstName} ${updatedUserDetails.lastName}`
+          `Password updated successfully for ${updatedUserDetails.firstname} ${updatedUserDetails.lastname}`
         )
       )
       console.log("Email sent successfully:", emailResponse.response)

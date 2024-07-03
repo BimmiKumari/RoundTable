@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from "react-redux"
 import { Table, Tbody, Td, Th, Thead, Tr } from "react-super-responsive-table"
-
 import { setCourse, setEditCourse } from "../../../../slices/courseSlice"
 import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css"
 import { useState } from "react"
@@ -9,7 +8,6 @@ import { FiEdit2 } from "react-icons/fi"
 import { HiClock } from "react-icons/hi"
 import { RiDeleteBin6Line } from "react-icons/ri"
 import { useNavigate } from "react-router-dom"
-
 import { formatDate } from "../../../../services/formatDate"
 import {
   deleteCourse,
@@ -37,7 +35,6 @@ export default function CoursesTable({ courses, setCourses }) {
     setLoading(false)
   }
 
-  // console.log("All Course ", courses)
 
   return (
     <>
@@ -47,13 +44,11 @@ export default function CoursesTable({ courses, setCourses }) {
             <Th className="flex-1 text-left text-sm font-medium uppercase text-richblack-100">
               Courses
             </Th>
-            <Th className="text-left text-sm font-medium uppercase text-richblack-100">
-              Duration
-            </Th>
-            <Th className="text-left text-sm font-medium uppercase text-richblack-100">
+           
+            <Th className=" text-sm font-medium uppercase  text-richblack-100 px-12">
               Price
             </Th>
-            <Th className="text-left text-sm font-medium uppercase text-richblack-100">
+            <Th className="text-left text-sm font-medium uppercase  text-richblack-100">
               Actions
             </Th>
           </Tr>
@@ -82,7 +77,7 @@ export default function CoursesTable({ courses, setCourses }) {
                     <p className="text-lg font-semibold text-richblack-5">
                       {course.courseName}
                     </p>
-                    <p className="text-xs text-richblack-300">
+                    <p className="text-xs text-caribbeangreen-25">
                       {course.courseDescription.split(" ").length >
                       TRUNCATE_LENGTH
                         ? course.courseDescription
@@ -110,19 +105,16 @@ export default function CoursesTable({ courses, setCourses }) {
                   </div>
                 </Td>
                 <Td className="text-sm font-medium text-richblack-100">
-                  2hr 30min
-                </Td>
-                <Td className="text-sm font-medium text-richblack-100">
                   ₹{course.price}
                 </Td>
-                <Td className="text-sm font-medium text-richblack-100 ">
+                <Td className="text-sm flex gap-5 font-medium text-richblack-100 ">
                   <button
                     disabled={loading}
                     onClick={() => {
                       navigate(`/dashboard/edit-course/${course._id}`)
                     }}
                     title="Edit"
-                    className="px-2 transition-all duration-200 hover:scale-110 hover:text-caribbeangreen-300"
+                    className="px-3 transition-all h-10 duration-200 hover:scale-110 hover:text-caribbeangreen-300"
                   >
                     <FiEdit2 size={20} />
                   </button>
@@ -144,7 +136,7 @@ export default function CoursesTable({ courses, setCourses }) {
                       })
                     }}
                     title="Delete"
-                    className="px-1 transition-all duration-200 hover:scale-110 hover:text-[#ff0000]"
+                    className="px-3 transition-all h-10 duration-200 hover:scale-110 hover:text-[#ff0000]"
                   >
                     <RiDeleteBin6Line size={20} />
                   </button>

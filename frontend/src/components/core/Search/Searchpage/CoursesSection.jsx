@@ -42,8 +42,8 @@ const CoursesSection = ({ courses }) => {
                 </p>
 
                 <p className="text-base text-caribbeangreen-200">
-                  {course?.data[0]?.instructor?.firstName}{" "}
-                  {course?.data[0]?.instructor?.lastName}
+                  {course?.data[0]?.instructor?.firstname}{" "}
+                  {course?.data[0]?.instructor?.lastname}
                 </p>
 
                 {/* rating */}

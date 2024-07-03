@@ -109,7 +109,7 @@ exports.querySearch = async (req, res) => {
         const instructorData = await User.findById(instructorId);
         return {
           ...course,
-          instructor: [instructorData.firstName, instructorData.lastName],
+          instructor: [instructorData.firstname, instructorData.lastname],
         };
       })
     );
@@ -127,14 +127,14 @@ exports.querySearch = async (req, res) => {
       {
         $and: [
           {
-            $or: [{ firstName: queryTitle }, { lastName: queryTitle }],
+            $or: [{ firstname: queryTitle }, { lastname: queryTitle }],
           },
           { accountType: "Instructor" },
         ],
       },
       {
-        firstName: true,
-        lastName: true,
+        firstname: true,
+        lastname: true,
         image: true,
       }
     ).sort({ createdAt: -1 });

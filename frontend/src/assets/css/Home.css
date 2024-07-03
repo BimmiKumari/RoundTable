@@ -326,14 +326,13 @@
         display:flex;
         width:70%;
         height:500px;
-        background-color: white;
+        background-color: rgb(248, 247, 245);
         border-radius:8px; 
     }
     .Card{
         height:400px;
         width:30%;
         margin-top:26px;
-        background-color: white;
         border-radius:8px;
         margin-left:25px;
     }
@@ -361,6 +360,7 @@
        }
     .cardbody{
         width:100%;
+        position: relative;
     }
     .heading{
         display:flex;
@@ -376,10 +376,7 @@
         font-weight:800;
     }
     
-    .desc{
-        margin:10px;
-        align-items:justify;
-    }
+
     .bookNow{
         margin-top:20px;
     }

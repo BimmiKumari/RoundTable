@@ -34,38 +34,38 @@ export default function EditProfile() {
           </h2>
           <div className="flex flex-col gap-5 lg:flex-row">
             <div className="flex flex-col gap-2 lg:w-[48%]">
-              <label htmlFor="firstName" className="lable-style text-white">
+              <label htmlFor="firstname" className="lable-style text-white">
                 First Name
               </label>
               <input
                 type="text"
-                name="firstName"
-                id="firstName"
+                name="firstname"
+                id="firstname"
                 placeholder="Enter first name"
                 className="form-style"
-                {...register("firstName", { required: true })}
-                defaultValue={user?.firstName}
+                {...register("firstname", { required: true })}
+                defaultValue={user?.firstname}
               />
-              {errors.firstName && (
+              {errors.firstname && (
                 <span className="-mt-1 text-[12px] text-yellow-100">
                   Please enter your first name.
                 </span>
               )}
             </div>
             <div className="flex flex-col gap-2 lg:w-[48%]">
-              <label htmlFor="lastName" className="lable-style text-white">
+              <label htmlFor="lastname" className="lable-style text-white">
                 Last Name
               </label>
               <input
                 type="text"
-                name="lastName"
-                id="lastName"
+                name="lastname"
+                id="lastname"
                 placeholder="Enter first name"
                 className="form-style"
-                {...register("lastName", { required: true })}
-                defaultValue={user?.lastName}
+                {...register("lastname", { required: true })}
+                defaultValue={user?.lastname}
               />
-              {errors.lastName && (
+              {errors.lastname && (
                 <span className="-mt-1 text-[12px] text-yellow-100">
                   Please enter your last name.
                 </span>

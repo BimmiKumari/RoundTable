@@ -110,7 +110,7 @@ exports.getAllRating = async (req, res) => {
                                     .sort({rating: "desc"})
                                     .populate({
                                         path:"user",
-                                        select:"firstName lastName email image",
+                                        select:"firstname lastname email image",
                                     })
                                     .populate({
                                         path:"course",

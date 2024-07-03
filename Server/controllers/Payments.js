@@ -123,7 +123,7 @@ exports.sendPaymentSuccessEmail = async (req, res) => {
       enrolledStudent.email,
       `Payment Received`,
       paymentSuccessEmail(
-        `${enrolledStudent.firstName} ${enrolledStudent.lastName}`,
+        `${enrolledStudent.firstname} ${enrolledStudent.lastname}`,
         amount / 100,
         orderId,
         paymentId
@@ -185,7 +185,7 @@ const enrollStudents = async (courses, userId, res) => {
         `Successfully Enrolled into ${enrolledCourse.courseName}`,
         courseEnrollmentEmail(
           enrolledCourse.courseName,
-          `${enrolledStudent.firstName} ${enrolledStudent.lastName}`
+          `${enrolledStudent.firstname} ${enrolledStudent.lastname}`
         )
       )
 

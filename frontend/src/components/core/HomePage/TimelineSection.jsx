@@ -6,27 +6,27 @@ import Logo3 from "../../../assets/TimeLineLogo/Logo3.svg";
 import Logo4 from "../../../assets/TimeLineLogo/Logo4.svg";
 
 const TimeLine = [
-    {
-      Logo: Logo1,
-      Heading: "Leadership",
-      Description: "Fully committed to the success company",
-    },
-    {
-      Logo: Logo2,
-      Heading: "Responsibility",
-      Description: "Students will always be our top priority",
-    },
-    {
-      Logo: Logo3,
-      Heading: "Flexibility",
-      Description: "The ability to switch is an important skills",
-    },
-    {
-      Logo: Logo4,
-      Heading: "Solve the problem",
-      Description: "Code your way to a solution",
-    },
-  ];
+  {
+    Logo: Logo1,
+    Heading: "Soft Skill",
+    Description: " Because Effective communication drives progress",
+  },
+  {
+    Logo: Logo2,
+    Heading: "Providing Networking opportunities",
+    Description: "Students will always be our top priority",
+  },
+  {
+    Logo: Logo3,
+    Heading: "Top Gen AI Demo",
+    Description: "Shape your Tomorrow with Experience of Intelligence",
+  },
+  {
+    Logo: Logo4,
+    Heading: "Hands-on-session",
+    Description: "Practical insights directly from experts in the field",
+  },
+];
 
 
 const TimelineSection = () => {

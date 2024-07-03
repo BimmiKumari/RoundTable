@@ -1,7 +1,7 @@
 import React, { useEffect ,useState } from 'react';
-import ReviewSlider from "../components/common/ReviewSlider";
 import { Link, useLocation, matchPath } from "react-router-dom";
 import frame from '../assets/Images/framebg.svg';
+import cardpic1 from '../assets/Images/back.jpg'
 import '../assets/css/Home.css';
 import SearchWeb from '../components/core/Search/SearchWeb/SearchWeb'
 import { GrWorkshop } from "react-icons/gr";
@@ -12,7 +12,6 @@ import Compare_with_others from "../assets/Images/Compare_with_others.png";
 import Plan_your_lessons from "../assets/Images/Plan_your_lessons.png";
 import { apiConnector } from "../services/apiconnector";
 import Footer from "../components/common/Footer"
-import { ratingsEndpoints } from "../services/apis";
 import { useSelector } from "react-redux";
 import HighlightText from "../components/core/HomePage/HighlightText"
 import TimelineSection from "../components/core/HomePage/TimelineSection"
@@ -20,7 +19,6 @@ import { categories } from "../services/apis";
 function Home() {
   const [subLinks, setSubLinks] = useState([]);
   const { user } = useSelector((state) => state.profile);
-  const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const location = useLocation();
@@ -38,28 +36,9 @@ function Home() {
       setLoading(false);
     })();
   };
-  const fecthAllReviews = async () => {
-    try {
-      const response = await apiConnector(
-        "GET",
-        ratingsEndpoints.REVIEWS_DETAILS_API
-      );
-
-      if (response) {
-        if (!response.data.success) {
-          throw new Error(response.data.message);
-        }
-        setReviews(response?.data?.data);
-        // console.log("REVIEWS_DETAILS_API RESPONSE.....",response)
-      }
-    } catch (error) {
-      console.log("ERROR IN GETTING ALL REVIEWS....", error);
-    }
-  };
 
   useEffect(() => {
     fetchSubLinks();
-    fecthAllReviews();
   }, []);
 
   const matchRoute = (route) => {
@@ -84,7 +63,7 @@ function Home() {
          </div>
          <div className='sub3 z-0'>
           <ul>
-             <li style={{backgroundColor: "rgb(10, 61, 58) " ,margin:12, borderRadius:8, fontSize:13.5,padding:6 }}><Link to="/Workshops">Book a workshop</Link></li>
+             <li style={{backgroundColor: "rgb(10, 61, 58) " ,margin:12, borderRadius:8, fontSize:13.5,padding:6 }}><Link to="/Workshop">Book a workshop</Link></li>
              <li style={{backgroundColor: "rgb(10, 61, 58) ",margin:12,borderRadius:8, fontSize:13.5,padding:6}}><Link to="/OurVirtualtour">Join a tour to your dream Company</Link></li>
              <li style={{backgroundColor: "rgb(10, 61, 58) ", margin:12,borderRadius:8, fontSize:13.5,padding:6}}><Link to="/">Listen Tech podcasts</Link></li>
              <li style={{backgroundColor: "rgb(10, 61, 58) ", margin:12,borderRadius:8, fontSize:13.5,padding:6}}><Link to="/">Explore opportunities</Link></li>
@@ -94,20 +73,27 @@ function Home() {
  
        </div>
        {/*Cards*/}
-       <div className="cardcollection z-10 shadow-caribbeangreen-600">
+       <div className="cardcollection z-10 shadow-caribbeangreen-600 ">
               <div className="Card"> 
                  <div className="cardhead1">
                      <div className="heading">Hands-on Workshop </div>
                      <GrWorkshop style={{width:"170",height:"90",color:"white",marginTop:"30",marginRight:"10"}}/>
                  </div>
-                 <div className="cardbody">
-                  <iframe src="https://giphy.com/embed/piZ2mYa0R9zzBpT9yb" width="99%" height="170" ></iframe>
-                  <div className="desc">
+                 <div className="cardbody relative">
+                  <div className="Card_container z-20">
+                    <img src={cardpic1} alt="Not loaded" className='rounded-b-lg'/>
+                    <div class="caption">
+                      <p>Join us </p>
+                      <h1>Now</h1>
+
+                    </div>
+                  </div>
+                  <div className="absolute z-30 top-44 bg-white w-5.5/6 left-3 right-3 rounded-lg">
                          <p style={{textAlign:'justify'}}>
                          Unlock your potential and join a vibrant community of learners. Convenient booking, secure transactions, and personalized experiences await.
                          <br/>Book your session now
                          </p>
-                         <button className='bookNow'>Book Now</button>
+                         <button className=''>Book Now</button>
                   </div>
                  </div>
               </div>
@@ -117,7 +103,14 @@ function Home() {
                      <FaChalkboardTeacher style={{width:"190",height:"110",color:"white",marginTop:"18",marginRight:"10"}}/>
                  </div>
                  <div className="cardbody">
-                    <iframe src="https://giphy.com/embed/S4ASJyURwnvoTPlbms" width="100%" height="170"  ></iframe>
+                 <div className="Card_container">
+                    <img src={cardpic1} alt="Not loaded" className='rounded-b-lg'/>
+                    <div class="caption">
+                      <p>Join us </p>
+                      <h1>Now</h1>
+
+                    </div>
+                  </div>
                     <div className="desc">
                          <p style={{textAlign:'justify'}}>
                          Unlock your future potential with expert career counseling! Discover your true calling, set achievable goals, and embark on a path to success. <br/>Join us now 
@@ -132,7 +125,14 @@ function Home() {
                     <GrTechnology style={{width:"180",height:"90",color:"white",marginTop:"20",marginRight:"5"}}/>
                  </div>
                  <div className="cardbody">
-                     <iframe src="https://giphy.com/embed/KX5nwoDX97AtPvKBF6" width="100%" height="170"  ></iframe>
+                 <div className="Card_container">
+                    <img src={cardpic1} alt="Not loaded" className='rounded-b-lg'/>
+                    <div class="caption">
+                      <p>Join us </p>
+                      <h1>Now</h1>
+
+                    </div>
+                  </div>
                      <div className="desc">
                          <p style={{textAlign:'justify'}}>
                           Stay ahead of the curve with our Emerging Technology Sessions! Dive into the latest innovations, from AI to blockchain, and gain cutting-edge knowledge and skills. Join us now 

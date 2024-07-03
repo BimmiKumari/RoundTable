@@ -10,8 +10,8 @@ const { convertSecondsToDuration } = require("../utils/secToDuration")
 exports.updateProfile = async (req, res) => {
   try {
     const {
-      firstName = "",
-      lastName = "",
+      firstname = "",
+      lastname = "",
       dateOfBirth = "",
       about = "",
       contactNumber = "",
@@ -24,8 +24,8 @@ exports.updateProfile = async (req, res) => {
     const profile = await Profile.findById(userDetails.additionalDetails)
 
     const user = await User.findByIdAndUpdate(id, {
-      firstName,
-      lastName,
+      firstname,
+      lastname,
     })
     await user.save()
 

@@ -69,13 +69,13 @@ const SearchDropDown = ({
 
   return (
     <div
-      className={`absolute top-14 ml-2 z-[1000] rounded-xl overflow-hidden bg-white  ${
+      className={`absolute top-14 ml-2 z-[1000] rounded-xl overflow-hidden bg-white text-black ${
         searchList ? "flex" : "hidden"
       } ${customClass} text-black`}
       ref={searchRef}
     >
       {loading ? (
-        <div className="w-full">
+        <div className="w-full ">
           <Skeleton
             count={
               querySearchCourses?.length === 0
@@ -94,8 +94,8 @@ const SearchDropDown = ({
           />
         </div>
       ) : query?.length === 0 ? (
-        <ul className="overflow-auto w-full">
-          <li className="w-full my-2 flex flex-col items-center justify-start gap-y-4">
+        <ul className="overflow-auto w-full flex">
+          <li className="w-full my-2 flex flex-col items-center justify-start gap-y-4 text-black">
             {subLinks
               ?.filter((subLink) => subLink?.courses?.length > 0)
               ?.map((subLink, i) => (
@@ -104,7 +104,7 @@ const SearchDropDown = ({
                     .split(" ")
                     .join("-")
                     .toLowerCase()}`}
-                  className="w-full bg-transparent hover:bg-caribbeangreen-300 px-5 text-xl py-4"
+                  className="w-full px-5 py-4 bg-transparent hover:bg-caribbeangreen-50"
                   key={i}
                   onClick={handleClick}
                 >
@@ -131,7 +131,7 @@ const SearchDropDown = ({
                   : instructorProfile?.length
                 : querySearchCourses?.length
             }
-            className="w-[90%] m-5"
+            className="w-[100%] m-5"
             baseColor="#585D69"
             highlightColor="#F2F4FF"
           />
@@ -153,9 +153,8 @@ const SearchDropDown = ({
                     onClick={() => {
                       setQuery(tag);
                       setAutoCompleteTags([]);
-                    }}
-                  >
-                    <AiOutlineSearch className="font-semibold text-3xl font-mono" />
+                    }} >
+                    <AiOutlineSearch className="font-semibold text-3xl font-mono text-black " />
                     <div>
                       <p className="font-semibold text-left">{tag}</p>
                     </div>
@@ -165,7 +164,7 @@ const SearchDropDown = ({
 
               {autoComplete?.map((item, i) => (
                 <div
-                  className="w-full px-5 py-4 bg-transparent hover:bg-richblue-700"
+                  className="w-full px-5 py-4 bg-transparent text-black "
                   key={i}
                 >
                   <button
@@ -189,7 +188,7 @@ const SearchDropDown = ({
                 querySearchCourses?.map((course, i) => (
                   <Link
                     to={`/courses/${course._id}`}
-                    className="w-full bg-transparent hover:bg-richblue-700 gap-3 px-5 flex xs:flex-row flex-col py-4"
+                    className="w-full bg-transparent gap-3 px-5 flex xs:flex-row flex-col py-4"
                     key={i}
                     onClick={handleClick}
                   >
@@ -210,7 +209,7 @@ const SearchDropDown = ({
               {instructorProfile.map((item, i) => (
                 <Link
                   to={`/instructor/${item._id}`}
-                  className="w-full bg-transparent hover:bg-richblue-700 gap-3 px-5 flex py-4"
+                  className="w-full bg-transparent  gap-3 px-5 flex py-4"
                   key={i}
                   onClick={handleClick}
                 >
@@ -222,7 +221,7 @@ const SearchDropDown = ({
                   <div className="flex flex-col items-start justify-center">
                     <p className="font-bold text-lg">
                       {" "}
-                      {item?.firstName} {item?.lastName}
+                      {item?.firstname} {item?.lastname}
                     </p>
                     <p className="font-medium text-yellow-50 ml-4">
                       Instructor
@@ -233,15 +232,15 @@ const SearchDropDown = ({
             </>
           ) : (
             <div
-              className="w-full px-5 py-4 bg-transparent hover:bg-richblue-700"
+              className="w-full px-5 py-4 bg-transparent text-black hover:text-transparent hover:bg-caribbeangreen-50"
               onClick={() => setSearchList(false)}
             >
               <Link
-                className="flex items-center justify-start gap-4"
+                className="flex items-center justify-start gap-4 "
                 to={`/search/${query}`}
               >
-                <AiOutlineSearch className="font-semibold text-2xl font-mono" />
-                <p className="font-semibold">{query}</p>
+                <AiOutlineSearch className="font-semibold text-2xl text-black  font-mono" />
+                <p className="font-semibold text-black">{query}</p>
               </Link>
             </div>
           )}

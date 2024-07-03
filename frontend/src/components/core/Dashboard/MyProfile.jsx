@@ -1,10 +1,8 @@
 import { RiEditBoxLine } from "react-icons/ri"
 import { useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
-
 import { formattedDate } from "../../../utils/dateFormatter"
 import IconBtn from "../../common/IconBtn"
-
 export default function MyProfile() {
   const { user } = useSelector((state) => state.profile)
   const navigate = useNavigate()
@@ -18,12 +16,12 @@ export default function MyProfile() {
         <div className="flex items-center gap-x-4">
           <img
             src={user?.image}
-            alt={`profile-${user?.firstName}`}
+            alt={`profile-${user?.firstname}`}
             className="aspect-square w-[78px] rounded-full object-cover"
           />
           <div className="space-y-1">
             <p className="text-lg font-semibold text-richblack-5">
-              {user?.firstName + " " + user?.lastName}
+              {user?.firstname + " " + user?.lastname}
             </p>
             <p className="text-sm text-richblack-300">{user?.email}</p>
           </div>
@@ -78,7 +76,7 @@ export default function MyProfile() {
             <div>
               <p className="mb-2 text-sm text-richblack-600">First Name</p>
               <p className="text-sm font-medium text-richblack-5">
-                {user?.firstName}
+                {user?.firstname}
               </p>
             </div>
             <div>
@@ -98,7 +96,7 @@ export default function MyProfile() {
             <div>
               <p className="mb-2 text-sm text-richblack-600">Last Name</p>
               <p className="text-sm font-medium text-richblack-5">
-                {user?.lastName}
+                {user?.lastname}
               </p>
             </div>
             <div>

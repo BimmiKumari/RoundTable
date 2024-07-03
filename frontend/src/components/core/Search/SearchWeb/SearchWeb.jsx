@@ -13,14 +13,14 @@ const SearchWeb = ({ searchOpen, setSearchOpen, subLinks }) => {
       <div
         className={`relative overflow-hidden ${
           searchOpen
-            ? "2xl:w-[40vw] w-[45vw] rounded-3xl bg-white"
+            ? "2xl:w-[40vw] w-[45vw] rounded-3xl bg-white text-black"
             : "w-[40px] rounded-full bg-transparent"
         } transition-all duration-1000`}
       >
         <input
           type="search"
           name="search"
-          placeholder="Search...."
+          placeholder="Select Your Domain...."
           onChange={(e) => setQuery(e.target.value)}
           onClick={() => setSearchList(true)}
           value={query}
@@ -30,7 +30,7 @@ const SearchWeb = ({ searchOpen, setSearchOpen, subLinks }) => {
               return navigate(`/search/${query}`);
             }
           }}
-          autoComplete="off"
+          autoComplete="on"
           className={`search__input ${
             searchOpen ? "w-[43vw] opacity-100 p-4" : "w-0 opacity-0 p-0"
           } transition-all duration-1000 h-[35px] bg-white border-none outline-none font-semibold text-black`}
@@ -40,7 +40,7 @@ const SearchWeb = ({ searchOpen, setSearchOpen, subLinks }) => {
             setSearchOpen((prev) => !prev);
             setQuery("");
           }}
-          className="w-8 h-8 bg-white rounded-full absolute top-[1.1px] right-1 mx-auto grid place-items-center place-content-center transition-[transform] duration-[0.6s]"
+          className="w-8 h-8 bg-white text-black rounded-full absolute top-[1.1px] right-1 mx-auto grid place-items-center place-content-center transition-[transform] duration-[0.6s]"
         >
           <AiOutlineSearch
             className={`text-xl text-black absolute ${
@@ -55,7 +55,7 @@ const SearchWeb = ({ searchOpen, setSearchOpen, subLinks }) => {
         </button>
       </div>
 
-      <SearchDropDown
+      <SearchDropDown 
         subLinks={subLinks}
         searchList={searchList}
         setSearchList={setSearchList}

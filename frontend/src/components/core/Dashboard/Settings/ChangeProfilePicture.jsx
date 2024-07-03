@@ -63,7 +63,7 @@ export default function ChangeProfilePicture() {
         <div className="flex items-center gap-x-4">
           <img
             src={previewSource || user?.image}
-            alt={`profile-${user?.firstName}`}
+            alt={`profile-${user?.firstname}`}
             className="aspect-square w-[78px] rounded-full object-cover"
           />
           <div className="space-y-2">
